@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
@@ -11,10 +11,11 @@ export default function Home(){
     const dispatch = useDispatch();
     const movies = useSelector((data) => data.movies);
     console.log(movies);
-   
-    useEffect(() => {
-        dispatch(getMovies());
-    },[dispatch]);
+    const [movieEncontrada, setMovieEncontrada] = useState([]);
+   console.log(movieEncontrada);
+    // useEffect(() => {
+    //     dispatch();
+    // },[dispatch]);
     return (
         <div className="container">
             <h1>Home Movies</h1>

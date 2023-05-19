@@ -5,6 +5,7 @@ import { getMovies } from "../../redux/actions/actions";
 export default function Searchbar(){
     const dispatch = useDispatch();
     const [movieValue, setMovieValue] = useState("");
+    console.log(movieValue);
 
     function handleSubmit(event){
         event.preventDefault();
