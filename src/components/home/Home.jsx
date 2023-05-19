@@ -11,10 +11,10 @@ export default function Home(){
     const dispatch = useDispatch();
     const movies = useSelector((data) => data.movies);
     console.log(movies);
-    const [movieEncontrada, setMovieEncontrada] = useState([]);
-   console.log(movieEncontrada);
+    // const [movieEncontrada, setMovieEncontrada] = useState([]);
+//    console.log(movieEncontrada);
     // useEffect(() => {
-    //     dispatch();
+    //     dispatch(getMovies());
     // },[dispatch]);
     return (
         <div className="container">
