@@ -8,8 +8,9 @@ export default function Detail() {
     const dispatch = useDispatch();
     const history = useHistory();
     const { id } = useParams();
+    console.log(id);
     const detail = useSelector((dataDetail) => dataDetail.detail);
-
+    console.log(detail);
     useEffect(() =>{
         dispatch(getDetails(id));
         return() => {
@@ -18,6 +19,7 @@ export default function Detail() {
     }, []);
 
     const backHandler = (event) => {
+        event.preventDefault();
         history.push("/home");
     };
 
