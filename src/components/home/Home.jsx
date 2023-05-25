@@ -26,6 +26,7 @@ export default function Home(){
                 movies.map((movie) => (
                     <div key={movie.imdbID}>
                         <Card 
+                            id={movie.imdbID}
                             title={movie.Title} 
                             year={movie.Year}
                             poster={movie.Poster} 

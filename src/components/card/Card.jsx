@@ -10,9 +10,9 @@ export default function Card(propsHome){
             <h4>
                 {propsHome.year}
             </h4>
-            <link to={`/detail/${propsHome.imdbID}`}>
+            <Link to={`/detail/${propsHome.id}`}>
                 <img src={propsHome.poster} alt="Poster movie" />
-            </link>
+            </Link>
 
         </div>
     );

@@ -10,7 +10,7 @@ export default function Detail() {
     const { id } = useParams();
     console.log(id);
     const detail = useSelector((dataDetail) => dataDetail.detail);
-    
+
     useEffect(() =>{
         dispatch(getDetails(id));
         return() => {
@@ -31,6 +31,9 @@ export default function Detail() {
                     <button onClick={backHandler}>Ir atras</button>
                 </span>
                 <p>Detalle de pelicula...</p>
+                <div className="detail">
+                    detail
+                </div>
             </div>
         ) : ("Loading...")
     );
